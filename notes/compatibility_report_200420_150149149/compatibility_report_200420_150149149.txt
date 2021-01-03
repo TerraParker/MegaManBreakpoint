@@ -1,0 +1,502 @@
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_ds_grid_delete_y(DSGridIndex, y, shift)/// @param DSGridIndex
+/// @param  y
+/// @param  shift
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_file_decrypt(fileName, key)/// @param fileName
+/// @param  key
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_file_encrypt(fileName, key)/// @param fileName
+/// @param  key
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_check(name, gamepadDevice)/// @param name
+/// @param  gamepadDevice
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_check_any(gamepadDevice)/// @param gamepadDevice
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_check_pressed(name, gamepadDevice)/// @param name
+/// @param  gamepadDevice
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_check_released(name, gamepadDevice)/// @param name
+/// @param  gamepadDevice
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_clear()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_config_load(filename, password)/// @param filename
+/// @param  password
+Converted string - line 136: 'exInput: Loaded config from file "' -> "exInput: Loaded config from file \""
+Converted string - line 136: '"' -> "\""
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_config_save(filename, password)/// @param filename
+/// @param  password
+Converted string - line 21: '{"input": { "keyboard": {' -> "{\"input\": { \"keyboard\": {"
+Converted string - line 27: '""' -> "\"\""
+Converted string - line 30: '"' -> "\""
+Converted string - line 30: '":' -> "\":"
+Converted string - line 34: '},"gamepad": {' -> "},\"gamepad\": {"
+Converted string - line 41: '""' -> "\"\""
+Converted string - line 44: '"' -> "\""
+Converted string - line 44: '":' -> "\":"
+Converted string - line 48: '}}}' -> "}}}"
+Converted string - line 70: 'exInput: Saved config to file "' -> "exInput: Saved config to file \""
+Converted string - line 70: '"' -> "\""
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_create(name, keyboardKey, gamepadButton)/// @param name
+/// @param  keyboardKey
+/// @param  gamepadButton
+Converted string - line 14: 'exInput: Error, input name cannot be empty' -> "exInput: Error, input name cannot be empty"
+Converted string - line 30: 'exInput: Error, input name "' -> "exInput: Error, input name \""
+Converted string - line 30: '" already exists' -> "\" already exists"
+Converted string - line 39: 'exInput: Created input "' -> "exInput: Created input \""
+Converted string - line 39: '" (' -> "\" ("
+Converted string - line 39: ',' -> ","
+Converted string - line 39: ')' -> ")"
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_destroy(name)/// @param name
+Converted string - line 17: 'exInput: Destroyed input "' -> "exInput: Destroyed input \""
+Converted string - line 17: '"' -> "\""
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_device_get_tilt_x()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_device_get_tilt_y()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_device_get_tilt_z()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_exists(name)/// @param name
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_gamepad_set_color(color, gamepadDevice)/// @param color
+/// @param  gamepadDevice
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_gamepad_vibrate_start(motorLeftForce, motorRightForce, duration, easing, syncDelta, gamepadDevice)/// @param motorLeftForce
+/// @param  motorRightForce
+/// @param  duration
+/// @param  easing
+/// @param  syncDelta
+/// @param  gamepadDevice
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_gamepad_vibrate_stop(gamepadDevice)/// @param gamepadDevice
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_get_debug_mode()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_get_icon(name)/// @param name
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_get_mode()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_get_touch_enabled()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_get_vibration_enabled()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_initialize()
+Converted string - line 4: 'exInput: Warning, Input system is already initialized' -> "exInput: Warning, Input system is already initialized"
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_click(mouseButton, instanceIndex)/// @param mouseButton
+/// @param  instanceIndex
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_get_x()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_get_y()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_hide()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_over(instanceIndex)/// @param instanceIndex
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_release(mouseButton, instanceIndex)/// @param mouseButton
+/// @param  instanceIndex
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_show()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_mouse_wheel(wheelDirection, instanceIndex)/// @param wheelDirection
+/// @param  instanceIndex
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_reassign(name, keyboardKey, gamepadButton)/// @param name
+/// @param  keyboardKey
+/// @param  gamepadButton
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_set_debug_mode(enabled)/// @param enabled
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_set_icons(name, keyboardIcon, gamepadIcon, playstationIcon, xboxIcon, ouyaIcon, androidIcon)/// @param name
+/// @param  keyboardIcon
+/// @param  gamepadIcon
+/// @param  playstationIcon
+/// @param  xboxIcon
+/// @param  ouyaIcon
+/// @param  androidIcon
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_set_mode(inputMode)/// @param inputMode
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_set_mode_autodetect()
+Converted string - line 6: 'exInput: Input mode changed to keyboard' -> "exInput: Input mode changed to keyboard"
+Converted string - line 15: 'exInput: Input mode changed to gamepad' -> "exInput: Input mode changed to gamepad"
+Converted string - line 25: 'exInput: Input mode changed to touch' -> "exInput: Input mode changed to touch"
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_set_touch_enabled(modeEnabled)/// @param modeEnabled
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_set_vibration_enabled(vibrationEnabled)/// @param vibrationEnabled
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_button_create(inputName, sprite, x, y)/// @param inputName
+/// @param  sprite
+/// @param  x
+/// @param  y
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_button_destroy(buttonHandle)/// @param buttonHandle
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_button_set_alpha(buttonHandle, alpha)/// @param buttonHandle
+/// @param  alpha
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_create(upInputName, downInputName, leftInputName, rightInputName, spriteTop, spriteBottom)/// @param upInputName
+/// @param  downInputName
+/// @param  leftInputName
+/// @param  rightInputName
+/// @param  spriteTop
+/// @param  spriteBottom
+Converted string - line 52: 'exInput: Created virtual joystick' -> "exInput: Created virtual joystick"
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_destroy(joystickHandle)/// @param joystickHandle
+Converted string - line 6: 'exInput: Destroyed virtual joystick' -> "exInput: Destroyed virtual joystick"
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_get_direction(joystickHandle)/// @param joystickHandle
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_set_alpha(joystickHandle, alpha)/// @param joystickHandle
+/// @param  alpha
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_set_display_scale(joystickHandle, scale)/// @param joystickHandle
+/// @param  scale
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_set_keycodes(joystickHandle, up, down, left, right)/// @param joystickHandle
+/// @param  up
+/// @param  down
+/// @param  left
+/// @param  right
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_set_region(joystickHandle, x, y, width, height)/// @param joystickHandle
+/// @param  x
+/// @param  y
+/// @param  width
+/// @param  height
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_virtual_joystick_set_visibility(joystickHandle, visible)/// @param joystickHandle
+/// @param  visible
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_math_smoothstep(a, b, t)/// @param a
+/// @param  b
+/// @param  t
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_os_is_browser()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_os_is_mobile()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_os_is_ouya()
+
+Converting GML script: exInput.gml
+Converted description /// @description ex_input_string_trim_right(string, characterSet)/// @param string
+/// @param  characterSet
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_back\scr_ease_in_back.gml
+Converted description /// @description scr_ease_in_back(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_bounce\scr_ease_in_bounce.gml
+Converted description /// @description scr_ease_in_bounce(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_circ\scr_ease_in_circ.gml
+Converted description /// @description scr_ease_in_circ(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_cubic\scr_ease_in_cubic.gml
+Converted description /// @description scr_ease_in_cubic(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_elastic\scr_ease_in_elastic.gml
+Converted description /// @description scr_ease_in_elastic(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_expo\scr_ease_in_expo.gml
+Converted description /// @description scr_ease_in_expo(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_quad\scr_ease_in_quad.gml
+Converted description /// @description scr_ease_in_quad(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_quart\scr_ease_in_quart.gml
+Converted description /// @description scr_ease_in_quart(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_quint\scr_ease_in_quint.gml
+Converted description /// @description scr_ease_in_quint(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_in_sine\scr_ease_in_sine.gml
+Converted description /// @description scr_ease_in_sine(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_back\scr_ease_inout_back.gml
+Converted description /// @description scr_ease_inout_back(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_bounce\scr_ease_inout_bounce.gml
+Converted description /// @description scr_ease_inout_bounce(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_circ\scr_ease_inout_circ.gml
+Converted description /// @description scr_ease_inout_circ(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_cubic\scr_ease_inout_cubic.gml
+Converted description /// @description scr_ease_inout_cubic(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_elastic\scr_ease_inout_elastic.gml
+Converted description /// @description scr_ease_inout_elastic(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_expo\scr_ease_inout_expo.gml
+Converted description /// @description scr_ease_inout_expo(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_quad\scr_ease_inout_quad.gml
+Converted description /// @description scr_ease_inout_quad(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_quart\scr_ease_inout_quart.gml
+Converted description /// @description scr_ease_inout_quart(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_quint\scr_ease_inout_quint.gml
+Converted description /// @description scr_ease_inout_quint(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_inout_sine\scr_ease_inout_sine.gml
+Converted description /// @description scr_ease_inout_sine(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_linear\scr_ease_linear.gml
+Converted description /// @description scr_ease_linear(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_back\scr_ease_out_back.gml
+Converted description /// @description scr_ease_out_back(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_bounce\scr_ease_out_bounce.gml
+Converted description /// @description scr_ease_out_bounce(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_circ\scr_ease_out_circ.gml
+Converted description /// @description scr_ease_out_circ(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_cubic\scr_ease_out_cubic.gml
+Converted description /// @description scr_ease_out_cubic(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_elastic\scr_ease_out_elastic.gml
+Converted description /// @description scr_ease_out_elastic(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_expo\scr_ease_out_expo.gml
+Converted description /// @description scr_ease_out_expo(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_quad\scr_ease_out_quad.gml
+Converted description /// @description scr_ease_out_quad(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_quart\scr_ease_out_quart.gml
+Converted description /// @description scr_ease_out_quart(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_quint\scr_ease_out_quint.gml
+Converted description /// @description scr_ease_out_quint(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_out_sine\scr_ease_out_sine.gml
+Converted description /// @description scr_ease_out_sine(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_slowmo\scr_ease_slowmo.gml
+Converted description /// @description scr_ease_slowmo(time, start, change, duration)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+
+Converting GML script: ${project_dir}\scripts\scr_ease_step\scr_ease_step.gml
+Converted description /// @description scr_ease_step(time, start, change, duration, steps)/// @param time
+/// @param  start
+/// @param  change
+/// @param  duration
+/// @param  steps
+
+Font fnt_ex_input_test has been converted to font family Segoe UI (Regular)
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\fnt_ex_input_test\fnt_ex_input_test.gms1.png
+Converting GML script: ${project_dir}\objects\obj_ex_input\Create_0.gml
+Converted description /// @description Initialize
+
+Converting GML script: ${project_dir}\objects\obj_ex_input\Step_0.gml
+Converted description /// @description  Handle Vibration
+
+Converting GML script: ${project_dir}\objects\obj_ex_input\Other_3.gml
+Converted description /// @description  Clear Vibration
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_button\Create_0.gml
+Converted description /// @description  Initialize
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_button\Step_0.gml
+Converted description /// @description  Swap images
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_button\Draw_64.gml
+Converted description /// @description  Draw button
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_button\Draw_0.gml
+Converted description /// @description  Do not draw sprite
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_joystick\Create_0.gml
+Converted description /// @description  Initialize
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_joystick\Step_0.gml
+Converted description /// @description  Update joystick
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_joystick\Draw_64.gml
+Converted description /// @description  Draw joystick
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_joystick\Draw_0.gml
+Converted description /// @description  Do not draw sprite
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_test\Create_0.gml
+Converted description /// @description  IMPORTANT: Initialize exInput FIRST
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_test\Step_1.gml
+Converted description /// @description  Autodetect Input Mode
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_test\Step_0.gml
+Converted description /// @description  Check Player Input
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_test\Draw_0.gml
+Converted description /// @description  Draw test and Input Icon
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_test\KeyPress_83.gml
+Converted description /// @description  Save Input Config
+
+Converting GML script: ${project_dir}\objects\obj_ex_input_test\KeyPress_76.gml
+Converted description /// @description  Load Input Config and Reassign
+
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script '__global_object_depths.gml'
