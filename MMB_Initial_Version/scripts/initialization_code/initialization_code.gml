@@ -1,12 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 ///Initialization code
-globalvar testStage;
+surface_resize( application_surface, 512, 448 );
 
 /* change this variable to the room you want to test. MAKE SURE YOU
 HAVE A MEGA MAN SPAWN OBJECT IN THE FIRST SCREEN OF THE ROOM OR THE
 GAME WILL NOT BE PLAYABLE. */
-testStage = rm_stage_template;
+globalvar testStage;
+testStage = rm_new_engine_test;
 
 globalvar fontGrid;
 fontGrid = ds_grid_create( 2, 207 );
@@ -158,3 +159,5 @@ for (var i = 0; i < gp_num; i++;) {
 	   
    }
 if controller != -1 gamepad_set_axis_deadzone( controller, .35 );
+
+room_goto( rm_boot );

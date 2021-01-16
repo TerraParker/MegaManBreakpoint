@@ -1,6 +1,6 @@
 /// @description Mega Man Control FLowchart
 //initialize variables
-
+/*
 isFiring = false;
 isJumping = false;
 hasFinishedJumping = false;
@@ -517,3 +517,199 @@ else {
 	}
 	
 }
+*/
+//reset instantaneous flags
+isFiring = false;
+isJumping = false;
+hasFinishedJumping = false;
+isRunning = false;
+isNudging = false;
+isClimbing = 0;
+isSlidingDown = false;
+//debug flying test
+if keyboard_check_pressed( vk_space ) {
+	isFlying = true;
+	v = -6;
+	h = facing * 3;
+}
+
+//initial airborne check event
+event_perform( ev_other, ev_user6 );
+//advance independent timers
+if ladderDropTimer > 0 ladderDropTimer--;
+if ++firingTimer > FIRE_DELAY {
+	firingTimer = FIRE_DELAY;
+}
+if isIntangible {
+	if ++intangibleTimer > 90 {
+		isIntangible = false;
+		intangibleTimer = 0;
+	}
+}
+//handle cancellation of behaviors and advance stun timer if stunned
+if isStunned {
+	if isOnLadder {
+		isOnLadder = false;
+		if !collision_line( bbox_left, bbox_bottom + 1, bbox_right, bbox_bottom + 1, tmp_geometry, 0, 1 ) isAirborne = true;
+		else isAirborne = false;
+	}
+	if isSliding {
+		isSliding = false;
+		slidingTimer = 0;
+		x += facing;
+		y -= 5;
+	}
+	isFlying = false;
+	isCharging = false;
+	chargingTimer = 0;
+	firingTimer = FIRE_DELAY;
+	isRunning = false;
+	runningTimer = 0;
+	if ++stunnedTimer = 20 {
+		isStunned = false;
+		stunnedTimer = 0;
+	}
+	exit;
+}
+//handle sliding behavior
+if isSliding {
+	event_perform( ev_other, ev_user7 );
+	if isSliding exit;
+}
+//handle ladder behavior
+if isOnLadder {
+	event_perform( ev_other, ev_user8 );
+	if isOnLadder exit;
+	}
+//other commitment behaviors go here - being pushed, being carried, stuck in honey, etc
+if isFlying {
+	
+	if isAirborne {
+		
+		//allow Mega Man to grab a ladder out of flight
+		if collision_rectangle( bbox_left + 4, bbox_top + 4, bbox_right - 4, bbox_bottom, tmp_ladder, 0, 1 )
+		and inputGrid[# up, held ] {
+			
+			if ladderDropTimer = 0 or !isAirborne {
+				
+				isOnLadder = true;
+				isAirborne = false;
+				isFlying = false;
+				x = collision_rectangle( bbox_left + 1, bbox_top + 4, bbox_right - 1, bbox_bottom + 1, tmp_ladder, 0, 1 ).x - 4;
+				
+			}
+			exit;	
+		}
+		if collision_rectangle( bbox_left + 4, bbox_top + 4, bbox_right - 4, bbox_bottom + 1, tmp_ladder, 0, 1 )
+		and inputGrid[# down, held ] 
+		and isAirborne {
+			
+			if ladderDropTimer = 0 {
+				
+				isOnLadder = true;
+				isAirborne = false;
+				isFlying = false;
+				x = collision_rectangle( bbox_left, bbox_top + 4, bbox_right, bbox_bottom + 1, tmp_ladder, 0, 1 ).x - 4;
+				
+			}
+			exit;
+		}
+		exit;
+	}
+	else isFlying = false;
+	
+}
+//handle initation of commitment behaviors, including miscellaneous ones above next
+//ladders
+{
+			
+	if collision_rectangle( bbox_left + 4, bbox_top + 4, bbox_right - 4, bbox_bottom, tmp_ladder, 0, 1 )
+	and inputGrid[# up, held ] {
+			
+		if ladderDropTimer = 0 or !isAirborne {
+				
+			isOnLadder = true;
+			isAirborne = false;
+			x = collision_rectangle( bbox_left + 1, bbox_top + 4, bbox_right - 1, bbox_bottom + 1, tmp_ladder, 0, 1 ).x - 4;
+				
+		}
+		exit;		
+	}
+		
+	if collision_rectangle( bbox_left + 4, bbox_top + 4, bbox_right - 4, bbox_bottom + 1, tmp_ladder, 0, 1 )
+	and inputGrid[# down, held ] 
+	and isAirborne {
+			
+		if ladderDropTimer = 0 {
+				
+			isOnLadder = true;
+			isAirborne = false;
+			x = collision_rectangle( bbox_left, bbox_top + 4, bbox_right, bbox_bottom + 1, tmp_ladder, 0, 1 ).x - 4;
+				
+		}
+		exit;
+			
+	}
+		
+	if collision_line( bbox_left + 4, bbox_bottom + 1, bbox_right - 4, bbox_bottom + 1, tmp_ladder, 0, 1 )
+	and inputGrid[# down, pressed ] 
+	and !isAirborne {
+			
+		isOnLadder = true;
+		isAirborne = false;
+		x = collision_rectangle( bbox_left, bbox_top, bbox_right, bbox_bottom + 1, tmp_ladder, 0, 1 ).x - 4;
+		y = collision_rectangle( bbox_left, bbox_top, bbox_right, bbox_bottom + 1, tmp_ladder, 0, 1 ).y + ( y - bbox_top ) - 9;
+		isAtLadderTop = true;
+		exit;
+			
+	}
+}
+//sliding
+{
+if !isAirborne and inputGrid[# jump, pressed] and inputGrid[# down, held] {
+	switch facing {
+				
+		case 1:
+			if !collision_line( bbox_right + 1, bbox_bottom - 4, bbox_right + 1, bbox_bottom - 1, tmp_geometry, 0, 1 ) {
+				isSliding = true;
+				x += facing * -1;
+				y += 5;
+				sprite_index = spr_megaman_slide;
+			}
+			exit;
+		case -1:
+			if !collision_line( bbox_left - 1, bbox_bottom - 4, bbox_left - 1, bbox_bottom - 1, tmp_geometry, 0, 1 ) {
+				isSliding = true;
+				x += facing * -1;
+				y += 5;
+				sprite_index = spr_megaman_slide;
+			}
+			exit;
+	}
+}
+else if !isAirborne and inputGrid[# slide, pressed ] {
+	switch facing {
+				
+		case 1:
+			if !collision_line( bbox_right + 1, bbox_bottom - 4, bbox_right + 1, bbox_bottom - 1, tmp_geometry, 0, 1 ) {
+				isSliding = true;
+				x += facing * -1;
+				y += 5;
+				sprite_index = spr_megaman_slide;
+			}
+			exit;
+		case -1:
+			if !collision_line( bbox_left - 1, bbox_bottom - 4, bbox_left - 1, bbox_bottom - 1, tmp_geometry, 0, 1 ) {
+				isSliding = true;
+				x += facing * -1;
+				y += 5;
+				sprite_index = spr_megaman_slide;
+			}
+			exit;
+	}
+}
+}
+//space for initiating other miscellaneous commitment behaviors - being pushed, being carried, stuck in honey, etc
+
+//free activity loop (running, jumping, shooting)
+event_perform( ev_other, ev_user9 );

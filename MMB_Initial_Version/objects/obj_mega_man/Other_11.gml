@@ -1,6 +1,6 @@
 /// @description Movement Prediction Phase
 
-h = 0;
+if !isFlying h = 0;
 if isAirborne {
 	
 	if hasFinishedJumping and v < -.1 {
@@ -24,7 +24,7 @@ else {
 	else if collision_in_direction( down, v, tmp_ladder )
 	and	!collision_line( bbox_left, bbox_bottom, bbox_right, bbox_bottom, tmp_ladder, 0, 1 )
 	and !isOnLadder y += truncate_movement_to_nearest( down, v, tmp_ladder );
-	v = 0; yslop = 0;
+	v = 0;
 	
 }
 if isStunned {
@@ -58,7 +58,11 @@ if isOnLadder {
 
 if isRunning h = facing * RUN_VEL;
 else if isSliding h = facing * SLIDE_VEL;
-if isNudging h = facing;
+if isNudging {
+	
+	h = facing * 1 - ( x mod 1 );
+	
+	}
 
 //movement cutoff
 if h > 0 {
@@ -105,7 +109,6 @@ if h > 0 and v > 0 {
 	if _c {
 		
 		h = _c.bbox_left - bbox_right - 1;
-		xslop = 0;
 		
 	}
 	
@@ -117,7 +120,6 @@ else if h > 0 and v < 0 {
 	if _c {
 		
 		h = _c.bbox_left - bbox_right - 1;
-		xslop = 0;
 		
 	}
 	
@@ -129,7 +131,6 @@ else if h < 0 and v > 0 {
 	if _c {
 		
 		h = _c.bbox_right - bbox_left + 1;
-		xslop = 0;
 		
 	}
 	
@@ -141,8 +142,8 @@ else if h < 0 and v < 0 {
 	if _c {
 		
 		h = _c.bbox_right - bbox_left + 1;
-		xslop = 0;
 		
 	}
 	
 }
+

@@ -3,23 +3,33 @@
 xprev = x;
 yprev = y;
 
-x += xslop;
-y += yslop;
-
 x += h;
-while collision_line( bbox_right, bbox_top, bbox_right, bbox_bottom, tmp_geometry, 0, 1 ) x--;
-while collision_line( bbox_left, bbox_top, bbox_left, bbox_bottom, tmp_geometry, 0, 1 ) x++;
 y += v;
-while collision_line( bbox_left, bbox_bottom, bbox_right, bbox_bottom, tmp_geometry, 0, 1 ) y--;
-while collision_line( bbox_left, bbox_top, bbox_right, bbox_top, tmp_geometry, 0, 1 ) y++;
 
-xslop = x mod 1;
-yslop = y mod 1;
-x = x div 1;
-y = y div 1;
 if bbox_right > room_width x = room_width - ( bbox_right - x ) - 1;
 if bbox_left < 0 x -= bbox_left;
 camera_set_view_pos( view_camera, get_instance_center_view( self ), 0 );
+
+//clean up subpixels by snapping to geometry
+
+//snap to ground
+if collision_line( bbox_left, bbox_bottom + 1, bbox_right, bbox_bottom + 1, tmp_geometry, 0, 1 )
+and y mod 1 != 0 y = y div 1 + 1;
+else if collision_line( bbox_left, bbox_bottom + 1, bbox_right, bbox_bottom + 1, tmp_ladder, 0, 1 )
+and !collision_line( bbox_left, bbox_bottom, bbox_right, bbox_bottom, tmp_ladder, 0, 1 )
+and y mod 1 != 0 y = y div 1 + 1;
+
+//snap to left
+if collision_line( bbox_left - 1, bbox_top, bbox_left - 1, bbox_bottom, tmp_geometry, 0, 1 )
+and x mod 1 != 0 round( x );
+
+//snap to right
+if collision_line( bbox_right + 1, bbox_top, bbox_right + 1, bbox_bottom, tmp_geometry, 0, 1 )
+and x mod 1 != 0 round( x );
+
+//snap to top
+if collision_line( bbox_left, bbox_top - 1, bbox_right, bbox_top - 1, tmp_geometry, 0, 1 )
+and y mod 1 != 0 round( y );	
 
 //death checks for spikes, crushing, pits
 if h > 0 {

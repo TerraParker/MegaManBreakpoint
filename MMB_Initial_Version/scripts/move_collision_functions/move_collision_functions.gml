@@ -164,19 +164,15 @@ function truncate_movement_to_nearest( _direction, _distance, _object ) {
 		switch _direction {
 			
 			case right:
-				xslop = 0;
 				return _least - bbox_right - 1;
 			
 			case down:
-				yslop = 0;
 				return _least - bbox_bottom - 1;
 				
 			case left:
-				xslop = 0;
 				return _least - bbox_left + 1;
 				
 			case up:
-				yslop = 0;
 				return _least - bbox_top + 1;
 		
 		}

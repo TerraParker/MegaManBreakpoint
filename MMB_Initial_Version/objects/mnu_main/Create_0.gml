@@ -1,5 +1,4 @@
 /// @description Insert description here
-menuBkg = img_mainmenu_bkg;
 textList = ds_list_create();
 ds_list_add( textList, draw_text_sprite( 80, 64, c_white, "MEGA MAN|BREAKPOINT|ENGINE BUILD" ) );
 ds_list_add( textList, draw_text_sprite( 88, 96, c_white, "NEW GAME" ) );

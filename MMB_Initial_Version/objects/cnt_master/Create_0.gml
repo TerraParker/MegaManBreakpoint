@@ -1,5 +1,5 @@
 /// game boot process
-globalvar inputHandler, currentStage, currentMenu;
+globalvar inputHandler, currentStage, currentMenu, drawSurface;
 inputHandler = instance_create_layer( 100, 100, "Instances", cnt_input );
 currentStage = noone;
 currentMenu = noone;
